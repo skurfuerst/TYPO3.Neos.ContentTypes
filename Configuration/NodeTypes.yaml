@@ -28,8 +28,8 @@
 'TYPO3.Neos.ContentTypes:Section':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
   label: 'Section'
-  icon: 'Images/Icons/White/page_layout_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/page_layout_icon-16.png'
     darkIcon: 'Images/Icons/Black/page_layout_icon-16.png'
 
 'TYPO3.Neos.ContentTypes:Folder':
@@ -55,8 +55,8 @@
 'TYPO3.Neos.ContentTypes:Shortcut':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
   label: 'Shortcut'
-  icon: 'Images/Icons/White/shortcut_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/shortcut_icon-16.png'
     darkIcon: 'Images/Icons/Black/shortcut_icon-16.png'
   groups:
     page:
@@ -65,8 +65,8 @@
 'TYPO3.Neos.ContentTypes:Page':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
   label: 'Page'
-  icon: 'Images/Icons/White/doc_empty_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/doc_empty_icon-16.png'
     darkIcon: 'Images/Icons/Black/doc_empty_icon-16.png'
   groups:
     page:
@@ -84,8 +84,8 @@
 'TYPO3.Neos.ContentTypes:Headline':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
-  icon: 'Images/Icons/White/text_letter_t_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/text_letter_t_icon-16.png'
     darkIcon: 'Images/Icons/Black/text_letter_t_icon-16.png'
   label: 'Headline'
   properties:
@@ -96,8 +96,8 @@
 'TYPO3.Neos.ContentTypes:Text':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
-  icon: 'Images/Icons/White/doc_lines_stright_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/doc_lines_stright_icon-16.png'
     darkIcon: 'Images/Icons/Black/doc_lines_stright_icon-16.png'
   label: 'Text'
   properties:
@@ -110,8 +110,8 @@
   label: 'Image'
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
-  icon: 'Images/Icons/White/picture_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/picture_icon-16.png'
     darkIcon: 'Images/Icons/Black/picture_icon-16.png'
   properties:
     image:
@@ -128,8 +128,8 @@
   label: 'Text with Image'
   superTypes: ['TYPO3.Neos.ContentTypes:Image', 'TYPO3.Neos.ContentTypes:Text']
   group: 'General'
-  icon: 'Images/Icons/White/image_text_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/image_text_icon-16.png'
     darkIcon: 'Images/Icons/Black/image_text_icon-16.png'
   properties:
     position:
@@ -147,8 +147,8 @@
 'TYPO3.Neos.ContentTypes:Html':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
-  icon: 'Images/Icons/White/brackets_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/brackets_icon-16.png'
     darkIcon: 'Images/Icons/Black/brackets_icon-16.png'
   label: 'HTML'
   showUneditableOverlay: true
@@ -168,8 +168,8 @@
 'TYPO3.Neos.ContentTypes:Menu':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'Structure'
-  icon: 'Images/Icons/White/list_bullets_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/list_bullets_icon-16.png'
     darkIcon: 'Images/Icons/Black/list_bullets_icon-16.png'
   label: 'Menu'
   showUneditableOverlay: true
@@ -239,8 +239,8 @@
 
 'TYPO3.Neos.ContentTypes:Column':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
-  icon: 'Images/Icons/White/columns_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/columns_icon-16.png'
     darkIcon: 'Images/Icons/Black/columns_icon-16.png'
   properties:
     layout:
@@ -328,8 +328,8 @@
 
 'TYPO3.Neos.ContentTypes:Plugin':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
-  icon: 'Images/Icons/White/app_window_shell_icon-16.png'
   ui:
+    icon: 'Images/Icons/White/app_window_shell_icon-16.png'
     darkIcon: 'Images/Icons/Black/app_window_shell_icon-16.png'
   label: 'Abstract plugin'
   showUneditableOverlay: true
