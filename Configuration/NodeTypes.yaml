@@ -6,22 +6,23 @@
       type: boolean
       ui:
         label: 'Hide'
-      # The "group" groups the properties together in "(property)groups"
-      group: 'visibility'
-      # The higher the priority, the more important the property is.
-      priority: 1
+        inspector:
+          group: 'visibility'
+          position: 30
     _hiddenBeforeDateTime:
       type: date
       ui:
         label: 'Hide before date'
-      group: 'visibility'
-      priority: 11
+        inspector:
+          group: 'visibility'
+          position: 10
     _hiddenAfterDateTime:
       type: date
       ui:
         label: 'Hide after date'
-      group: 'visibility'
-      priority: 10
+        inspector:
+          group: 'visibility'
+          position: 20
   ui:
     inspector:
       groups:
@@ -49,16 +50,18 @@
   properties:
     title:
       type: string
-      group: 'page'
       ui:
         label: 'Title'
         reloadIfChanged: true
+        inspector:
+          group: 'page'
     _name:
       type: string
-      group: 'page'
       ui:
         label: 'Name (URL)'
         reloadIfChanged: true
+        inspector:
+          group: 'page'
 
 'TYPO3.Neos.ContentTypes:Shortcut':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
@@ -135,10 +138,11 @@
   properties:
     image:
       type: TYPO3\Media\Domain\Model\ImageVariant
-      group: 'image'
       ui:
         label: 'Image'
         reloadIfChanged: true
+        inspector:
+          group: 'image'
 
 'TYPO3.Neos.ContentTypes:TextWithImage':
   superTypes: ['TYPO3.Neos.ContentTypes:Image', 'TYPO3.Neos.ContentTypes:Text']
@@ -150,7 +154,6 @@
   properties:
     position:
       type: enum
-      group: 'image'
       options:
         values:
           left:
@@ -160,6 +163,8 @@
       ui:
         label: 'Image position'
         reloadIfChanged: true
+        inspector:
+          group: 'image'
 
 'TYPO3.Neos.ContentTypes:Html':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -179,8 +184,9 @@
       type: string
       ui:
         label: 'HTML Content'
+        inspector:
+          group: 'html'
       defaultValue: '<p>Enter HTML here</p>'
-      group: 'html'
       userInterface:
         class: T3.Content.UI.Editor.HtmlEditor
 
@@ -200,10 +206,11 @@
   properties:
     startLevel:
       type: enum
-      group: 'options'
       ui:
         reloadIfChanged: true
         label: 'Starting Level'
+        inspector:
+          group: 'options'
       defaultValue: '0'
       options:
         values:
@@ -231,10 +238,11 @@
             label: 'Sixth Level Of Website'
     maximumLevels:
       type: enum
-      group: 'options'
       ui:
         reloadIfChanged: true
         label: 'Maximum Levels'
+        inspector:
+          group: 'options'
       defaultValue: '1'
       options:
         values:
@@ -275,7 +283,8 @@
       type: enum
       ui:
         label: 'Layout'
-      group: 'column'
+        inspector:
+          group: 'column'
 
 'TYPO3.Neos.ContentTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -371,25 +380,29 @@
   properties:
     package:
       type: string
-      group: 'pluginSettings'
       ui:
         label: 'Package'
         reloadIfChanged: true
+        inspector:
+          group: 'pluginSettings'
     subpackage:
       type: string
-      group: 'pluginSettings'
       ui:
         label: 'Subpackage'
         reloadIfChanged: true
+        inspector:
+          group: 'pluginSettings'
     controller:
       type: string
-      group: 'pluginSettings'
       ui:
         label: 'Controller Name'
         reloadIfChanged: true
+        inspector:
+          group: 'pluginSettings'
     action:
       type: string
-      group: 'pluginSettings'
       ui:
         label: 'Action'
         reloadIfChanged: true
+        inspector:
+          group: 'pluginSettings'
