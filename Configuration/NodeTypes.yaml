@@ -22,11 +22,12 @@
         label: 'Hide after date'
       group: 'visibility'
       priority: 10
-
-  groups:
-    visibility:
-      label: 'Visibility'
-      priority: 1
+  ui:
+    inspector:
+      groups:
+        visibility:
+          label: 'Visibility'
+          position: 100
 
 'TYPO3.Neos.ContentTypes:Section':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
@@ -40,6 +41,11 @@
   search: 'Pages'
   ui:
     label: 'Folder'
+    inspector:
+      groups:
+        page:
+          label: 'Folder options'
+          position: 10
   properties:
     title:
       type: string
@@ -53,10 +59,6 @@
       ui:
         label: 'Name (URL)'
         reloadIfChanged: true
-  groups:
-    page:
-      label: 'Folder options'
-      priority: 10
 
 'TYPO3.Neos.ContentTypes:Shortcut':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
@@ -64,9 +66,10 @@
     label: 'Shortcut'
     icon: 'Images/Icons/White/shortcut_icon-16.png'
     darkIcon: 'Images/Icons/Black/shortcut_icon-16.png'
-  groups:
-    page:
-      label: 'Shortcut options'
+    inspector:
+      groups:
+        page:
+          label: 'Shortcut options'
 
 'TYPO3.Neos.ContentTypes:Page':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
@@ -74,9 +77,10 @@
     label: 'Page'
     icon: 'Images/Icons/White/doc_empty_icon-16.png'
     darkIcon: 'Images/Icons/Black/doc_empty_icon-16.png'
-  groups:
-    page:
-      label: 'Page options'
+    inspector:
+      groups:
+        page:
+          label: 'Page options'
 
 'TYPO3.Neos.ContentTypes:ContentObject':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
@@ -122,6 +126,12 @@
     group: 'General'
     icon: 'Images/Icons/White/picture_icon-16.png'
     darkIcon: 'Images/Icons/Black/picture_icon-16.png'
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          position: 5
+
   properties:
     image:
       type: TYPO3\Media\Domain\Model\ImageVariant
@@ -129,10 +139,6 @@
       ui:
         label: 'Image'
         reloadIfChanged: true
-  groups:
-    image:
-      label: 'Image'
-      priority: 5
 
 'TYPO3.Neos.ContentTypes:TextWithImage':
   superTypes: ['TYPO3.Neos.ContentTypes:Image', 'TYPO3.Neos.ContentTypes:Text']
@@ -163,6 +169,11 @@
     icon: 'Images/Icons/White/brackets_icon-16.png'
     darkIcon: 'Images/Icons/Black/brackets_icon-16.png'
     inlineEditable: false
+    inspector:
+      groups:
+        html:
+          label: 'HTML'
+          position: 10
   properties:
     source:
       type: string
@@ -172,10 +183,6 @@
       group: 'html'
       userInterface:
         class: T3.Content.UI.Editor.HtmlEditor
-  groups:
-    html:
-      label: 'HTML'
-      priority: 10
 
 'TYPO3.Neos.ContentTypes:Menu':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -185,6 +192,11 @@
     icon: 'Images/Icons/White/list_bullets_icon-16.png'
     darkIcon: 'Images/Icons/Black/list_bullets_icon-16.png'
     inlineEditable: false
+    inspector:
+      groups:
+        options:
+          label: 'Options'
+          position: 30
   properties:
     startLevel:
       type: enum
@@ -246,26 +258,24 @@
             label: '9'
           '10':
             label: '10'
-  groups:
-   options:
-     label: 'Options'
-     priority: 30
+
 
 'TYPO3.Neos.ContentTypes:Column':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   ui:
     icon: 'Images/Icons/White/columns_icon-16.png'
     darkIcon: 'Images/Icons/Black/columns_icon-16.png'
+    inspector:
+      groups:
+        column:
+          label: 'Columns'
+          position: 10
   properties:
     layout:
       type: enum
       ui:
         label: 'Layout'
       group: 'column'
-  groups:
-    column:
-      label: 'Columns'
-      priority: 10
 
 'TYPO3.Neos.ContentTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -354,6 +364,10 @@
     icon: 'Images/Icons/White/app_window_shell_icon-16.png'
     darkIcon: 'Images/Icons/Black/app_window_shell_icon-16.png'
     inlineEditable: false
+    inspector:
+      groups:
+        pluginSettings:
+          label: 'Plugin Settings'
   properties:
     package:
       type: string
@@ -379,6 +393,3 @@
       ui:
         label: 'Action'
         reloadIfChanged: true
-  groups:
-    pluginSettings:
-      label: 'Plugin Settings'
