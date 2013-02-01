@@ -27,15 +27,16 @@
 
 'TYPO3.Neos.ContentTypes:Section':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
-  label: 'Section'
   ui:
+    label: 'Section'
     icon: 'Images/Icons/White/page_layout_icon-16.png'
     darkIcon: 'Images/Icons/Black/page_layout_icon-16.png'
 
 'TYPO3.Neos.ContentTypes:Folder':
   superTypes: ['TYPO3.TYPO3CR:Folder', 'TYPO3.Neos.ContentTypes:AbstractNode']
-  label: 'Folder'
   search: 'Pages'
+  ui:
+    label: 'Folder'
   properties:
     title:
       type: string
@@ -54,8 +55,8 @@
 
 'TYPO3.Neos.ContentTypes:Shortcut':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
-  label: 'Shortcut'
   ui:
+    label: 'Shortcut'
     icon: 'Images/Icons/White/shortcut_icon-16.png'
     darkIcon: 'Images/Icons/Black/shortcut_icon-16.png'
   groups:
@@ -64,8 +65,8 @@
 
 'TYPO3.Neos.ContentTypes:Page':
   superTypes: ['TYPO3.Neos.ContentTypes:Folder']
-  label: 'Page'
   ui:
+    label: 'Page'
     icon: 'Images/Icons/White/doc_empty_icon-16.png'
     darkIcon: 'Images/Icons/Black/doc_empty_icon-16.png'
   groups:
@@ -74,7 +75,8 @@
 
 'TYPO3.Neos.ContentTypes:ContentObject':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
-  label: 'Abstract content object'
+  ui:
+    label: 'Abstract content object'
   search: 'Content'
   properties:
     title:
@@ -85,9 +87,9 @@
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
   ui:
+    label: 'Headline'
     icon: 'Images/Icons/White/text_letter_t_icon-16.png'
     darkIcon: 'Images/Icons/Black/text_letter_t_icon-16.png'
-  label: 'Headline'
   properties:
     title:
       default: '<h1>Enter headline here</h1>'
@@ -97,9 +99,9 @@
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
   ui:
+    label: 'Text'
     icon: 'Images/Icons/White/doc_lines_stright_icon-16.png'
     darkIcon: 'Images/Icons/Black/doc_lines_stright_icon-16.png'
-  label: 'Text'
   properties:
     text:
       label: string
@@ -107,10 +109,10 @@
   inlineEditableProperties: ['title', 'text']
 
 'TYPO3.Neos.ContentTypes:Image':
-  label: 'Image'
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
   ui:
+    label: 'Image'
     icon: 'Images/Icons/White/picture_icon-16.png'
     darkIcon: 'Images/Icons/Black/picture_icon-16.png'
   properties:
@@ -125,10 +127,10 @@
       priority: 5
 
 'TYPO3.Neos.ContentTypes:TextWithImage':
-  label: 'Text with Image'
   superTypes: ['TYPO3.Neos.ContentTypes:Image', 'TYPO3.Neos.ContentTypes:Text']
   group: 'General'
   ui:
+    label: 'Text with Image'
     icon: 'Images/Icons/White/image_text_icon-16.png'
     darkIcon: 'Images/Icons/Black/image_text_icon-16.png'
   properties:
@@ -148,9 +150,9 @@
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'General'
   ui:
+    label: 'HTML'
     icon: 'Images/Icons/White/brackets_icon-16.png'
     darkIcon: 'Images/Icons/Black/brackets_icon-16.png'
-  label: 'HTML'
   showUneditableOverlay: true
   properties:
     source:
@@ -169,9 +171,9 @@
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   group: 'Structure'
   ui:
+    label: 'Menu'
     icon: 'Images/Icons/White/list_bullets_icon-16.png'
     darkIcon: 'Images/Icons/Black/list_bullets_icon-16.png'
-  label: 'Menu'
   showUneditableOverlay: true
   properties:
     startLevel:
@@ -255,7 +257,8 @@
 'TYPO3.Neos.ContentTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
   group: 'Structure'
-  label: 'Two column content'
+  ui:
+    label: 'Two column content'
   structure:
     column0:
       type: 'TYPO3.Neos.ContentTypes:Section'
@@ -281,7 +284,8 @@
 'TYPO3.Neos.ContentTypes:ThreeColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
   group: 'Structure'
-  label: 'Three column content'
+  ui:
+    label: 'Three column content'
   structure:
     column0:
       type: 'TYPO3.Neos.ContentTypes:Section'
@@ -307,7 +311,8 @@
 'TYPO3.Neos.ContentTypes:FourColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
   group: 'Structure'
-  label: 'Four column content'
+  ui:
+    label: 'Four column content'
   structure:
     column0:
       type: 'TYPO3.Neos.ContentTypes:Section'
@@ -329,9 +334,9 @@
 'TYPO3.Neos.ContentTypes:Plugin':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
   ui:
+    label: 'Abstract plugin'
     icon: 'Images/Icons/White/app_window_shell_icon-16.png'
     darkIcon: 'Images/Icons/Black/app_window_shell_icon-16.png'
-  label: 'Abstract plugin'
   showUneditableOverlay: true
   properties:
     package:
