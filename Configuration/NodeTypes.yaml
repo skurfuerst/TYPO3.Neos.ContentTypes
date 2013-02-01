@@ -4,19 +4,22 @@
       type: boolean
     _hidden:
       type: boolean
-      label: 'Hide'
+      ui:
+        label: 'Hide'
       # The "group" groups the properties together in "(property)groups"
       group: 'visibility'
       # The higher the priority, the more important the property is.
       priority: 1
     _hiddenBeforeDateTime:
       type: date
-      label: 'Hide before date'
+      ui:
+        label: 'Hide before date'
       group: 'visibility'
       priority: 11
     _hiddenAfterDateTime:
       type: date
-      label: 'Hide after date'
+      ui:
+        label: 'Hide after date'
       group: 'visibility'
       priority: 10
 
@@ -40,15 +43,15 @@
   properties:
     title:
       type: string
-      label: 'Title'
       group: 'page'
       ui:
+        label: 'Title'
         reloadIfChanged: true
     _name:
       type: string
-      label: 'Name (URL)'
       group: 'page'
       ui:
+        label: 'Name (URL)'
         reloadIfChanged: true
   groups:
     page:
@@ -84,7 +87,8 @@
   properties:
     title:
       type: 'string'
-      label: 'Content Title'
+      ui:
+        label: 'Content Title'
 
 'TYPO3.Neos.ContentTypes:Headline':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -107,7 +111,7 @@
     darkIcon: 'Images/Icons/Black/doc_lines_stright_icon-16.png'
   properties:
     text:
-      label: string
+      type: string
       defaultValue: '<p>Enter text here</p>'
   inlineEditableProperties: ['title', 'text']
 
@@ -121,9 +125,9 @@
   properties:
     image:
       type: TYPO3\Media\Domain\Model\ImageVariant
-      label: 'Image'
       group: 'image'
       ui:
+        label: 'Image'
         reloadIfChanged: true
   groups:
     image:
@@ -140,7 +144,6 @@
   properties:
     position:
       type: enum
-      label: 'Image position'
       group: 'image'
       options:
         values:
@@ -149,6 +152,7 @@
           right:
             label: 'Right'
       ui:
+        label: 'Image position'
         reloadIfChanged: true
 
 'TYPO3.Neos.ContentTypes:Html':
@@ -162,7 +166,8 @@
   properties:
     source:
       type: string
-      label: 'HTML Content'
+      ui:
+        label: 'HTML Content'
       defaultValue: '<p>Enter HTML here</p>'
       group: 'html'
       userInterface:
@@ -183,10 +188,10 @@
   properties:
     startLevel:
       type: enum
-      label: 'Starting Level'
       group: 'options'
       ui:
         reloadIfChanged: true
+        label: 'Starting Level'
       defaultValue: '0'
       options:
         values:
@@ -214,10 +219,10 @@
             label: 'Sixth Level Of Website'
     maximumLevels:
       type: enum
-      label: 'Maximum Levels'
       group: 'options'
       ui:
         reloadIfChanged: true
+        label: 'Maximum Levels'
       defaultValue: '1'
       options:
         values:
@@ -254,7 +259,8 @@
   properties:
     layout:
       type: enum
-      label: 'Layout'
+      ui:
+        label: 'Layout'
       group: 'column'
   groups:
     column:
@@ -351,27 +357,27 @@
   properties:
     package:
       type: string
-      label: 'Package'
       group: 'pluginSettings'
       ui:
+        label: 'Package'
         reloadIfChanged: true
     subpackage:
       type: string
-      label: 'Subpackage'
       group: 'pluginSettings'
       ui:
+        label: 'Subpackage'
         reloadIfChanged: true
     controller:
       type: string
-      label: 'Controller Name'
       group: 'pluginSettings'
       ui:
+        label: 'Controller Name'
         reloadIfChanged: true
     action:
       type: string
-      label: 'Action'
       group: 'pluginSettings'
       ui:
+        label: 'Action'
         reloadIfChanged: true
   groups:
     pluginSettings:
