@@ -42,12 +42,14 @@
       type: string
       label: 'Title'
       group: 'page'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
     _name:
       type: string
       label: 'Name (URL)'
       group: 'page'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
   groups:
     page:
       label: 'Folder options'
@@ -93,7 +95,7 @@
     darkIcon: 'Images/Icons/Black/text_letter_t_icon-16.png'
   properties:
     title:
-      default: '<h1>Enter headline here</h1>'
+      defaultValue: '<h1>Enter headline here</h1>'
   inlineEditableProperties: ['title']
 
 'TYPO3.Neos.ContentTypes:Text':
@@ -106,7 +108,7 @@
   properties:
     text:
       label: string
-      default: '<p>Enter text here</p>'
+      defaultValue: '<p>Enter text here</p>'
   inlineEditableProperties: ['title', 'text']
 
 'TYPO3.Neos.ContentTypes:Image':
@@ -121,7 +123,8 @@
       type: TYPO3\Media\Domain\Model\ImageVariant
       label: 'Image'
       group: 'image'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
   groups:
     image:
       label: 'Image'
@@ -145,7 +148,8 @@
             label: 'Left'
           right:
             label: 'Right'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
 
 'TYPO3.Neos.ContentTypes:Html':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -159,7 +163,7 @@
     source:
       type: string
       label: 'HTML Content'
-      default: '<p>Enter HTML here</p>'
+      defaultValue: '<p>Enter HTML here</p>'
       group: 'html'
       userInterface:
         class: T3.Content.UI.Editor.HtmlEditor
@@ -181,8 +185,9 @@
       type: enum
       label: 'Starting Level'
       group: 'options'
-      reloadOnChange: true
-      default: '0'
+      ui:
+        reloadIfChanged: true
+      defaultValue: '0'
       options:
         values:
           '-4':
@@ -211,8 +216,9 @@
       type: enum
       label: 'Maximum Levels'
       group: 'options'
-      reloadOnChange: true
-      default: '1'
+      ui:
+        reloadIfChanged: true
+      defaultValue: '1'
       options:
         values:
           '1':
@@ -267,7 +273,7 @@
       type: 'TYPO3.Neos.ContentTypes:Section'
   properties:
     layout:
-      default: '50-50'
+      defaultValue: '50-50'
       options:
         values:
           '50-50':
@@ -280,7 +286,8 @@
             label: '66% / 33%'
           '33-66':
             label: '33% / 66%'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
 
 'TYPO3.Neos.ContentTypes:ThreeColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -296,7 +303,7 @@
       type: 'TYPO3.Neos.ContentTypes:Section'
   properties:
     layout:
-      default: '33-33-33'
+      defaultValue: '33-33-33'
       options:
         values:
           '33-33-33':
@@ -307,7 +314,8 @@
             label: '25% / 50% / 25%'
           '25-25-50':
             label: '25% / 25% / 50%'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
 
 'TYPO3.Neos.ContentTypes:FourColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -325,12 +333,13 @@
       type: 'TYPO3.Neos.ContentTypes:Section'
   properties:
     layout:
-      default: '25-25-25-25'
+      defaultValue: '25-25-25-25'
       options:
         values:
           '25-25-25-25':
             label: '25% / 25% / 25% / 25%'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
 
 'TYPO3.Neos.ContentTypes:Plugin':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -344,22 +353,26 @@
       type: string
       label: 'Package'
       group: 'pluginSettings'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
     subpackage:
       type: string
       label: 'Subpackage'
       group: 'pluginSettings'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
     controller:
       type: string
       label: 'Controller Name'
       group: 'pluginSettings'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
     action:
       type: string
       label: 'Action'
       group: 'pluginSettings'
-      reloadOnChange: true
+      ui:
+        reloadIfChanged: true
   groups:
     pluginSettings:
       label: 'Plugin Settings'
