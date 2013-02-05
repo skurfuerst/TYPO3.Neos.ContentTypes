@@ -107,7 +107,8 @@
   properties:
     title:
       defaultValue: '<h1>Enter headline here</h1>'
-  inlineEditableProperties: ['title']
+      ui:
+        inlineEditable: true
 
 'TYPO3.Neos.ContentTypes:Text':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -120,7 +121,11 @@
     text:
       type: string
       defaultValue: '<p>Enter text here</p>'
-  inlineEditableProperties: ['title', 'text']
+      ui:
+        inlineEditable: true
+    title:
+      ui:
+        inlineEditable: true
 
 'TYPO3.Neos.ContentTypes:Image':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
