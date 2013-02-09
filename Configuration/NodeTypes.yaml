@@ -299,7 +299,7 @@
   ui:
     label: 'Two column content'
     group: 'Structure'
-  structure:
+  childNodes:
     column0:
       type: 'TYPO3.Neos.ContentTypes:Section'
     column1:
@@ -328,7 +328,7 @@
   ui:
     label: 'Three column content'
     group: 'Structure'
-  structure:
+  childNodes:
     column0:
       type: 'TYPO3.Neos.ContentTypes:Section'
     column1:
@@ -357,7 +357,7 @@
   ui:
     label: 'Four column content'
     group: 'Structure'
-  structure:
+  childNodes:
     column0:
       type: 'TYPO3.Neos.ContentTypes:Section'
     column1:
