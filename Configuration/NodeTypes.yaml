@@ -158,18 +158,19 @@
     darkIcon: 'Images/Icons/Black/image_text_icon-16.png'
   properties:
     position:
-      type: enum
-      options:
-        values:
-          left:
-            label: 'Left'
-          right:
-            label: 'Right'
+      type: string
       ui:
         label: 'Image position'
         reloadIfChanged: true
         inspector:
           group: 'image'
+          editor: T3.Content.UI.Editor.Selectbox
+          editorOptions:
+            values:
+              left:
+                label: 'Left'
+              right:
+                label: 'Right'
 
 'TYPO3.Neos.ContentTypes:Html':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -191,9 +192,8 @@
         label: 'HTML Content'
         inspector:
           group: 'html'
+          editor: T3.Content.UI.Editor.HtmlEditor
       defaultValue: '<p>Enter HTML here</p>'
-      userInterface:
-        class: T3.Content.UI.Editor.HtmlEditor
 
 'TYPO3.Neos.ContentTypes:Menu':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
@@ -210,67 +210,69 @@
           position: 30
   properties:
     startLevel:
-      type: enum
+      type: string
+      defaultValue: '0'
       ui:
         reloadIfChanged: true
         label: 'Starting Level'
         inspector:
           group: 'options'
-      defaultValue: '0'
-      options:
-        values:
-          '-4':
-            label: 'Four Levels Above Current Page'
-          '-3':
-            label: 'Three Levels Above Current Page'
-          '-2':
-            label: 'Two Levels Above Current Page'
-          '-1':
-            label: 'One Level Above Current Page'
-          '0':
-            label: 'Same Level As Current Page'
-          '1':
-            label: 'First Level Of Website'
-          '2':
-            label: 'Second Level Of Website'
-          '3':
-            label: 'Third Level Of Website'
-          '4':
-            label: 'Forth Level Of Website'
-          '5':
-            label: 'Fifth Level Of Website'
-          '6':
-            label: 'Sixth Level Of Website'
+          editor: T3.Content.UI.Editor.Selectbox
+          editorOptions:
+            values:
+              '-4':
+                label: 'Four Levels Above Current Page'
+              '-3':
+                label: 'Three Levels Above Current Page'
+              '-2':
+                label: 'Two Levels Above Current Page'
+              '-1':
+                label: 'One Level Above Current Page'
+              '0':
+                label: 'Same Level As Current Page'
+              '1':
+                label: 'First Level Of Website'
+              '2':
+                label: 'Second Level Of Website'
+              '3':
+                label: 'Third Level Of Website'
+              '4':
+                label: 'Forth Level Of Website'
+              '5':
+                label: 'Fifth Level Of Website'
+              '6':
+                label: 'Sixth Level Of Website'
     maximumLevels:
-      type: enum
+      type: string
+      defaultValue: '1'
       ui:
         reloadIfChanged: true
         label: 'Maximum Levels'
         inspector:
           group: 'options'
-      defaultValue: '1'
-      options:
-        values:
-          '1':
-            label: '1'
-          '2':
-            label: '2'
-          '3':
-            label: '3'
-          '4':
-            label: '4'
-          '5':
-            label: '5'
-          '6':
-            label: '6'
-          '7':
-            label: '7'
-          '8':
-            label: '8'
-          '9':
-            label: '9'
-          '10':
-            label: '10'
+          editor: T3.Content.UI.Editor.Selectbox
+          editorOptions:
+            values:
+              '1':
+                label: '1'
+              '2':
+                label: '2'
+              '3':
+                label: '3'
+              '4':
+                label: '4'
+              '5':
+                label: '5'
+              '6':
+                label: '6'
+              '7':
+                label: '7'
+              '8':
+                label: '8'
+              '9':
+                label: '9'
+              '10':
+                label: '10'
 
 
 'TYPO3.Neos.ContentTypes:Column':
@@ -285,11 +287,12 @@
           position: 10
   properties:
     layout:
-      type: enum
+      type: string
       ui:
         label: 'Layout'
         inspector:
           group: 'column'
+          editor: T3.Content.UI.Editor.Selectbox
 
 'TYPO3.Neos.ContentTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -304,20 +307,21 @@
   properties:
     layout:
       defaultValue: '50-50'
-      options:
-        values:
-          '50-50':
-            label: '50% / 50%'
-          '75-25':
-            label: '75% / 25%'
-          '25-75':
-            label: '25% / 75%'
-          '66-33':
-            label: '66% / 33%'
-          '33-66':
-            label: '33% / 66%'
       ui:
         reloadIfChanged: true
+        inspector:
+          editorOptions:
+            values:
+              '50-50':
+                label: '50% / 50%'
+              '75-25':
+                label: '75% / 25%'
+              '25-75':
+                label: '25% / 75%'
+              '66-33':
+                label: '66% / 33%'
+              '33-66':
+                label: '33% / 66%'
 
 'TYPO3.Neos.ContentTypes:ThreeColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -334,18 +338,19 @@
   properties:
     layout:
       defaultValue: '33-33-33'
-      options:
-        values:
-          '33-33-33':
-            label: '33% / 33% / 33%'
-          '50-25-25':
-            label: '50% / 25% / 25%'
-          '25-50-25':
-            label: '25% / 50% / 25%'
-          '25-25-50':
-            label: '25% / 25% / 50%'
       ui:
         reloadIfChanged: true
+        inspector:
+          editorOptions:
+            values:
+              '33-33-33':
+                label: '33% / 33% / 33%'
+              '50-25-25':
+                label: '50% / 25% / 25%'
+              '25-50-25':
+                label: '25% / 50% / 25%'
+              '25-25-50':
+                label: '25% / 25% / 50%'
 
 'TYPO3.Neos.ContentTypes:FourColumn':
   superTypes: ['TYPO3.Neos.ContentTypes:Column']
@@ -364,12 +369,13 @@
   properties:
     layout:
       defaultValue: '25-25-25-25'
-      options:
-        values:
-          '25-25-25-25':
-            label: '25% / 25% / 25% / 25%'
       ui:
         reloadIfChanged: true
+        inspector:
+          editorOptions:
+            values:
+              '25-25-25-25':
+                label: '25% / 25% / 25% / 25%'
 
 'TYPO3.Neos.ContentTypes:Plugin':
   superTypes: ['TYPO3.Neos.ContentTypes:ContentObject']
