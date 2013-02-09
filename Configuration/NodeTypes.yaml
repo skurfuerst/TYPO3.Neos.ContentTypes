@@ -1,4 +1,10 @@
 'TYPO3.Neos.ContentTypes:AbstractNode':
+  ui:
+    inspector:
+      groups:
+        visibility:
+          label: 'Visibility'
+          position: 100
   properties:
     _removed:
       type: boolean
@@ -23,12 +29,6 @@
         inspector:
           group: 'visibility'
           position: 20
-  ui:
-    inspector:
-      groups:
-        visibility:
-          label: 'Visibility'
-          position: 100
 
 'TYPO3.Neos.ContentTypes:Section':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
@@ -87,10 +87,10 @@
 
 'TYPO3.Neos.ContentTypes:ContentObject':
   superTypes: ['TYPO3.Neos.ContentTypes:AbstractNode']
+  search: 'Content'
   ui:
     label: 'Abstract content object'
     inlineEditable: true
-  search: 'Content'
   properties:
     title:
       type: 'string'
